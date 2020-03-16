@@ -10,8 +10,9 @@
         <CollectionView ItemsSource="{Binding ListViewCollection}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <CustomViews:ListTemplate TitleValue="{Binding Title}"
-                                                SubTitleValue="{Binding SubTitle}"/>
+                    <CustomViews:ListTemplate UserImage="{Binding UserImage}"
+                                              TitleValue="{Binding Title}"
+                                              SubTitleValue="{Binding SubTitle}"/>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>

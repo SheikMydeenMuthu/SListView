@@ -16,6 +16,15 @@ namespace SListView.CustomViews
         {
             InitializeComponent();
         }
+
+        public static readonly BindableProperty UserImageProperty = BindableProperty.Create(
+            propertyName: nameof(UserImage),
+            returnType: typeof(Image),
+            declaringType: typeof(ListTemplate),
+            defaultBindingMode: BindingMode.TwoWay,
+            defaultValue: null,
+            propertyChanged: OnUserImagePropertyChanged);
+
         public static readonly BindableProperty TitleValueProperty = BindableProperty.Create(
             propertyName: nameof(TitleValue),
             returnType: typeof(string),
@@ -42,6 +51,19 @@ namespace SListView.CustomViews
         {
             var listTemplate = (bindable as ListTemplate);
             listTemplate.SubTitle.Text = newValue.ToString();
+        }
+
+        private static void OnUserImagePropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            var listTemplate = (bindable as ListTemplate);
+            listTemplate.ImgIcon.Source = newValue.ToString();
+        }
+
+
+        public Image UserImage
+        {
+            get { return (Image)GetValue(UserImageProperty); }
+            set { SetValue(UserImageProperty, value); }
         }
 
         public string TitleValue

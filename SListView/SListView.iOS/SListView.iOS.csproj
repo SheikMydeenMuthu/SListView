@@ -132,4 +132,7 @@
       <Name>SListView</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomRenderer\" />
+  </ItemGroup>
 </Project>

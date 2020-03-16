@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SListView
+namespace SListView.ViewModel
 {
     public class SimpleListViewViewModel : BaseViewModel
     {
@@ -32,9 +32,9 @@ namespace SListView
         {
             List<ListModel> listModel = new List<ListModel>();
 
-            listModel.Add(new ListModel { Title = "List 1", SubTitle = "List 1 SubTitle" });
-            listModel.Add(new ListModel { Title = "List 2", SubTitle = "List 2 SubTitle" });
-            listModel.Add(new ListModel { Title = "List 3", SubTitle = "List 3 SubTitle" });
+            listModel.Add(new ListModel { UserImage = "User.png", Title = "List 1", SubTitle = "List 1 SubTitle" });
+            listModel.Add(new ListModel { UserImage = "User.png", Title = "List 2", SubTitle = "List 2 SubTitle" });
+            listModel.Add(new ListModel { UserImage = "User.png", Title = "List 3", SubTitle = "List 3 SubTitle" });
 
             return listModel;
 

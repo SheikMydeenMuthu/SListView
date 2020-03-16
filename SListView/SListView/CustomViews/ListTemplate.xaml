@@ -14,13 +14,19 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="7"/>
-                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="2"/>
             </Grid.ColumnDefinitions>
-
-            <Label x:Name="Title"/>
-            <Label x:Name="SubTitle" Grid.Row="1"/>
+            
+            <Image x:Name="ImgIcon"/>
+            
+            <Label x:Name="Title" 
+                   Grid.Column="1"/>
+            
+            <Label x:Name="SubTitle" 
+                   Grid.Row="1"
+                   Grid.Column="1"/>
 
         </Grid>
     </Frame>
