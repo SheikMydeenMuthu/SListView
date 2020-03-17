@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Padding="4" Margin="4"
+             Padding="2" Margin="4"
              x:Class="SListView.CustomViews.ListTemplate">
     <Frame CornerRadius="6">
         <Grid>
@@ -14,19 +14,36 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2"/>
             </Grid.ColumnDefinitions>
-            
-            <Image x:Name="ImgIcon"/>
+            <Frame Padding="0"
+                   Grid.RowSpan="2"
+                   CornerRadius="20" 
+                   IsClippedToBounds="True"
+                   HeightRequest="45"
+                   WidthRequest="45"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand">
+                <Image x:Name="ImgIcon"/>
+            </Frame>
             
             <Label x:Name="Title" 
-                   Grid.Column="1"/>
+                   Grid.Column="1"
+                   HeightRequest="25"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   HorizontalOptions="StartAndExpand" 
+                   VerticalOptions="End"/>
             
             <Label x:Name="SubTitle" 
                    Grid.Row="1"
-                   Grid.Column="1"/>
+                   Grid.Column="1"
+                   HeightRequest="25"   
+                   FontSize="12"                   
+                   HorizontalOptions="StartAndExpand" 
+                   VerticalOptions="Start"/>
 
         </Grid>
     </Frame>

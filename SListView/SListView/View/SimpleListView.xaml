@@ -7,7 +7,8 @@
              mc:Ignorable="d"
              x:Class="SListView.View.SimpleListView">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding ListViewCollection}">
+        <CollectionView ItemsSource="{Binding ListViewCollection}"
+                        HeightRequest="60">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <CustomViews:ListTemplate UserImage="{Binding UserImage}"

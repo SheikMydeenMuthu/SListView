@@ -19,10 +19,10 @@ namespace SListView.CustomViews
 
         public static readonly BindableProperty UserImageProperty = BindableProperty.Create(
             propertyName: nameof(UserImage),
-            returnType: typeof(Image),
+            returnType: typeof(string),
             declaringType: typeof(ListTemplate),
             defaultBindingMode: BindingMode.TwoWay,
-            defaultValue: null,
+            //defaultValue: ImageSource.FromFile("User.png"),
             propertyChanged: OnUserImagePropertyChanged);
 
         public static readonly BindableProperty TitleValueProperty = BindableProperty.Create(
@@ -60,9 +60,9 @@ namespace SListView.CustomViews
         }
 
 
-        public Image UserImage
+        public string UserImage
         {
-            get { return (Image)GetValue(UserImageProperty); }
+            get { return (string)GetValue(UserImageProperty); }
             set { SetValue(UserImageProperty, value); }
         }
 
